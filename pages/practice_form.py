@@ -1,7 +1,6 @@
 import os
 
 from selenium.webdriver.common.by import By
-from selenium import webdriver
 
 
 class PracticePage:
@@ -19,7 +18,7 @@ class PracticePage:
         self.address_input = (By.ID, "currentAddress")
         self.state_dropdown = (By.ID, "react-select-3-input")
         self.city_dropdown = (By.ID, "react-select-4-input")
-        self.submit_button = (By.ID, "submit")
+        self.submit_button = (By.CSS_SELECTOR, "#submit")
 
     def fill_first_name(self, first_name):
         self.driver.find_element(*self.first_name_input).send_keys(first_name)
